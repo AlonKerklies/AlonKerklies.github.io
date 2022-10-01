@@ -3,9 +3,13 @@
 }
 
 body {
+  background-image: linear-gradient(to Ttop, rgb(117, 132, 132), white);
   background-color: #e5e1de;
   margin: 0px;
+  /*font-family: font-family: "Mulish", sans-serif;*/
+
   font-family: "Mulish", sans-serif;
+
   /*font-family: sans-serif; --- THE ORIGINAL FONT-- */
   /* height: 100vh;*/
 }
@@ -21,17 +25,10 @@ div {
   color: #422724;
 }
 
-p,
-li,
-label {
-  font-family: "Mulish", sans-serif;
-  font-size: 18px;
-  line-height: 28px;
-  margin: 0;
-}
-
 p {
-  margin: 0 0 20px 0;
+  font-family: "Mulish", sans-serif;
+  /* line-height: 32px;*/
+  margin: 0;
 }
 
 h1 {
@@ -46,43 +43,53 @@ h2 {
   font-weight: 400;
   font-size: 50px;
   line-height: 55px;
-  margin: 0 0 15px 0;
 }
 
 h3 {
   font-size: 18px;
 }
 
+section {
+  margin: 0px 60px 0 60px;
+  /*   flex-basis: 57%;*/
+}
+
 /*  -------------  navigation links  -------------   */
 
 nav ul {
+  list-style-type: none;
+  text-align: right;
   display: flex;
-  margin: 30px 60px 0 60px; /*Location of the NAV*/
+  margin: 11px 60px 0 60px;
   padding: 0;
 }
 
 nav li {
-  display: inline;
+  /* border: #00b7ff 2px dotted;*/
+  display: inline-block;
   margin: 0px 0px 0px 0px; /*רווח בין הכפתורים/*/
   margin: 0 0 0 15px;
 }
 
 nav a {
   display: block;
-  padding: 5px 5px 5px 5px; /* Just to produce a larger pressing area*/
+  padding: 5px 5px 5px 5px;
   text-decoration: none;
 }
 
 nav {
-  position: fixed; /*to stay up*/
+  position: fixed;
+  margin: 0 auto;
   top: 0;
   width: 100%;
+  z-index: 1;
 }
 
 /* */
 nav a:link,
 nav a:visited {
   font-weight: 800;
+  font-size: 18px;
   text-decoration: none;
   color: #422724; /*חייב שוב צבע כי הוא ויזיטד*/
 }
@@ -92,28 +99,38 @@ nav a span {
 
 nav a:hover span {
   background-color: #e5e1de;
+  text-decoration: none;
   border-bottom: 3px solid #422724;
 }
 
 nav h3 {
-  margin: 8px 0 0 0; /*
-  logo be aligned to the menu*/
+  display: inline;
+  margin: 0 0 0 0;
 }
+
+/*   ------------- Text & Fonts -------------   
+/* 
+h2 {
+  color: #686868;
+  font-size: 14px;
+}
+*/
 
 /*   ------------- Main Page -------------   */
 
 .card {
   background-color: #e5e1de;
 
-  align-items: center; /* Let the elements be centered*/
+  align-items: center;
+  /*border-radius: 10px;*/
+
+  /* flex-direction: column;*/
   display: flex;
   justify-content: center;
-  margin: 28vh 20vw;
+  margin: 20vh 20vw;
   padding: 0 0;
-  z-index: -3;
-  transition: transform 0.6s, background-color 0.1s;
 
-  /*I understood that this is how the things related to the buttons should be placed, otherwise there will be problems*/
+  transition: transform 0.6s, background-color 0.1s;
 }
 .card:visited {
 }
@@ -125,30 +142,60 @@ nav h3 {
   transform: scale(1.05);
 }
 
+.card:active body {
+  background-color: #00ff37;
+  color: #0d39ff;
+}
+
+.card:active .card {
+  background-color: #00ff37;
+  color: #0d39ff;
+}
+
+/*
+.nav-item {
+  align-self: flex-end;
+  color: #3ded69;
+}
+*/
+.page-wrapper {
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+}
+
 .profile-image {
-  /*This is the image inserted using Java*/
+  /*border-radius: 50%;*/
+  /*height: 180px;*/
   width: 420px;
   margin: -10px -55px 0 0;
 }
 
 #index-subline {
-  font-family: "Mulish", sans-serif;
   font-size: 29px;
   font-weight: 700;
-  margin: -10px 0px 0px 0px;
+  padding: 0px;
+  margin: 0px 0px 15px 0px;
 }
 
 .ul_links {
-  padding: 20px 0 0 0;
+  padding: 10px 0 0 0;
   list-style: none;
+  /*font-size: 14px;*/
 }
+/*
+.ul_links  a {
+  background-color: #ff5e00;
+}*/
 
 .ul_links li span {
   background-color: #d7d0cc;
 }
 
 .ul_links li {
-  padding-bottom: 10px;
+  padding-bottom: 15px;
+  font-size: 18px;
   /* display:inline-block;*/
 }
 
@@ -156,18 +203,28 @@ nav h3 {
   display: inline-block;
   min-width: 160px;
   margin: 0;
+  /* display:inline-block;*/
+}
+
+.ul i {
+  display: block;
+  margin: 0;
+  /* display:inline-block;*/
 }
 
 .fa-brands {
   float: left;
   font-size: 22px;
   color: #422724;
-  margin: 3px 12px 0px 0px;
+  margin: 0px 12px 0px 0px;
 }
 
 .card_links:link {
-  text-decoration: none; /* remove the line under the link*/
-  font-weight: 800;
+  color: #422724;
+  color: #026999;
+  text-decoration: none;
+  padding-bottom: 25px;
+  font-weight: 600;
 }
 
 .card_links:visited {
@@ -200,25 +257,15 @@ nav h3 {
 /*  ----------------------------------    Footer   -----------------------------------------------------  ;*/
 /*  ----------------------------------------------------------------------------------------------------  ;*/
 /*  ----------------------------------------------------------------------------------------------------  ;*/
-
-#trees {
-  z-index: -1;
-  position: fixed;
-  bottom: 44px;
-  right: 0;
-}
-
 footer {
   background-color: #d7d0cc;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
   padding: 0;
   margin: 0;
 }
 
 footer ul {
-  list-style-type: none; /*remove the bulit*/
+  list-style-type: none;
+
   padding: 10px 0;
   margin: 0px 60px 0px 60px;
   display: flex;
@@ -251,9 +298,7 @@ footer ul p {
 
 footer ul div {
   color: #9a887e;
-  margin: 2px 0 0 0;
-  font-family: "Mulish", sans-serif;
-  font-size: 18px;
+  margin: 0 0 0 0;
 }
 
 footer ul img {
@@ -268,24 +313,73 @@ footer ul img {
   margin-left: auto;
 }
 
-/*  ----------------------------------------------------------------------------------------------------  ;*/
-/*  ----------------------------------------------------------------------------------------------------  ;*/
-/*  ----------------------------------    about page   -------------------------------------------------  ;*/
-/*  ----------------------------------------------------------------------------------------------------  ;*/
-
-.wrapper {
-  width: 60%;
-  margin: 5em auto 4em auto;
-  padding: 100px 0;
-  display: flex;
+/*  --------    CONTACT  PaGe--------------  ;*/
+/*
+section {
+  flex-basis: 57%;
+  margin-right: 10%;
+}
+aside {
+  flex-basis: 33%;
+}
+*/
+p[for="identify"],
+[for="message"] {
+  margin: 2rem 0 0 0;
 }
 
-.aleft {
-  flex-basis: 67%;
-  margin-right: 5%;
+fieldset {
+  text-decoration: none;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin: 0 0 2rem 0;
+  background-color: rgb(255, 255, 255);
 }
-.aright {
-  flex-basis: 23%;
+
+legend {
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin: 1rem 0 1rem 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+select {
+  font-size: 1rem;
+}
+
+button {
+  margin: 0;
+  padding: 0.3rem 1rem;
+  font-size: 1rem;
+  background-color: rgb(0, 155, 39);
+  color: white;
+  border-radius: 4px;
+  border: none;
+}
+
+button:hover {
+  background-color: rgb(2, 192, 49);
+}
+
+input:not([type="radio"]):not([type="checkbox"]),
+textarea {
+  display: block;
+  margin-bottom: 1rem;
+  width: 20rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  padding: 0 1rem;
+  border-radius: 4px;
+
+  border: 1px solid black;
+}
+textarea {
+  height: 7rem;
+  padding: 0.2rem 0.2rem 1rem 0.5rem;
 }
 
 /*  --- map gallery ---*/
@@ -293,6 +387,7 @@ footer ul img {
 .gallery-img {
   display: none; /*  first of all dont display ---*/
   width: 100%;
+  height: 300px;
   border: 0;
 }
 
@@ -300,102 +395,40 @@ footer ul img {
   display: block;
 }
 
-iframe {
-  height: 500px;
+.image-gallery {
+  /*width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;*/
+  width: 400px;
+}
+
+.image-gallery-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .image-gallery-btn {
+  background-color: #00ff37;
+  color: #0d39ff;
+  padding: 11px 0 11px 0;
+  width: 100px;
+  border-radius: 8px;
   cursor: pointer;
 }
 
 .prev {
-  margin-right: 22px; /*  space between buttons---*/
+  margin-right: 22px; /*  space between ---*/
 }
 
-/*  ----------------------------------------------------------------------------------------------------  ;*/
-/*  ----------------------------------------------------------------------------------------------------  ;*/
-/*  ----------------------------------   contact   ------------------------------------------------------  ;*/
-/*  ----------------------------------------------------------------------------------------------------  ;*/
-/*  ----------------------------------------------------------------------------------------------------  ;*/
-
-.oneline {
-  width: 28%; /*קובע את רוחב הטופס*/
-  margin: 5em auto 4em auto;
-}
-
-.oneline form {
-  margin: -3em 0 0 0;
-}
-
-#identify {
-}
-
-#identify,
-input,
-textarea {
-  font-family: "Mulish", sans-serif;
-  height: 30px;
-  font-size: 18px;
-  padding: 0 8px;
-  width: 100%;
-  border: 0;
-}
-
-textarea {
-  height: 90px;
-  padding: 8px;
-}
-
-input::placeholder,
-textarea::placeholder {
-  color: rgb(165, 165, 165);
-}
-
-fieldset {
-  text-decoration: none;
-  border: 0px solid black;
-  margin: 0 0 0 0;
-  padding: 0;
-}
-
-label {
-  display: block;
-  margin-bottom: 0.1rem;
-  margin-top: 0.8rem;
-}
-select {
-  color: rgb(156, 156, 156);
-  color: #422724;
-}
-
-/*  ----------------------------------------------------------------------------------------------------  ;*/
-/*  ----------------------------------------------------------------------------------------------------  ;*/
-/*  ----------------------------------   about & Contact   ----------------------------------------------  ;*/
-/*  ----------------------------------------------------------------------------------------------------  ;*/
-/*  ----------------------------------------------------------------------------------------------------  ;*/
-
-button {
-  margin: 25px 0 0 0;
-  width: 7rem;
-  padding: 0.3rem 0;
-  font-size: 18px;
-  background-color: #bdbdbd;
-  color: #422724;
-  border: none;
-}
-
-button:hover {
-  background-color: #fcdf03;
-}
-
-.sumbitBtn:disabled,
 .image-gallery-btn:disabled {
-  color: #9b9b9b;
-  background-color: #d7d0cc;
+  background-color: #a1a1a1;
   cursor: not-allowed;
 }
 
-/*                                                                                                 
+/*                                                                                              
+                                                                                                              
                                                                                                               
                                                                                                               
                                                                           ,                 ..                
