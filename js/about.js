@@ -1,5 +1,3 @@
-console.log("yeahh the about connect");
-
 const prevBtn = document.querySelector(".prev");
 const nextBtn = document.querySelector(".next");
 const galleryImgs = document.querySelectorAll(".gallery-img");
@@ -33,25 +31,3 @@ nextBtn.addEventListener("click", function () {
 });
 
 console.log(currentlySelected);
-
-//function myMap() {
-// var mapProp = {
-//  center: new google.maps.LatLng(51.508742, -0.12085),
-//  zoom: 15,
-// };
-// var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
-//}
-
-//
-//var map1 = new google.maps.Map(
-// document.getElementById("googleMap1"),
-// mapOptions1
-//);
-//var map2 = new google.maps.Map(
-// document.getElementById("googleMap2"),
-// mapOptions2
-//);
-//var map3 = new google.maps.Map(
-// document.getElementById("googleMap3"),
-//mapOptions3
-//);

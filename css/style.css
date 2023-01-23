@@ -57,24 +57,28 @@ h3 {
 
 nav ul {
   display: flex;
-  margin: 30px 60px 0 60px; /*Location of the NAV*/
+  margin: 30px 60px 0 60px;
+  /*Location of the NAV*/
   padding: 0;
 }
 
 nav li {
   display: inline;
-  margin: 0px 0px 0px 0px; /*רווח בין הכפתורים/*/
+  margin: 0px 0px 0px 0px;
+  /*רווח בין הכפתורים/*/
   margin: 0 0 0 15px;
 }
 
 nav a {
   display: block;
-  padding: 5px 5px 5px 5px; /* Just to produce a larger pressing area*/
+  padding: 5px 5px 5px 5px;
+  /* Just to produce a larger pressing area*/
   text-decoration: none;
 }
 
 nav {
-  position: fixed; /*to stay up*/
+  position: fixed;
+  /*to stay up*/
   top: 0;
   width: 100%;
 }
@@ -84,8 +88,10 @@ nav a:link,
 nav a:visited {
   font-weight: 800;
   text-decoration: none;
-  color: #422724; /*חייב שוב צבע כי הוא ויזיטד*/
+  color: #422724;
+  /*חייב שוב צבע כי הוא ויזיטד*/
 }
+
 nav a span {
   background-color: #fcdf03;
 }
@@ -96,34 +102,39 @@ nav a:hover span {
 }
 
 nav h3 {
-  margin: 8px 0 0 0; /*
+  margin: 8px 0 0 0;
+  /*
   logo be aligned to the menu*/
 }
 
 /*   ------------- Main Page -------------   */
 
 .card {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 20px;
+  /*requires explicit height*/
   background-color: #e5e1de;
-
-  align-items: center; /* Let the elements be centered*/
+  align-items: center;
+  /* Let the elements be centered*/
   display: flex;
   justify-content: center;
-  margin: 28vh 20vw;
+  /* margin: 28vh 20vw; */
   padding: 0 0;
-  z-index: -3;
-  transition: transform 0.6s, background-color 0.1s;
+  z-index: 0;
 
   /*I understood that this is how the things related to the buttons should be placed, otherwise there will be problems*/
 }
-.card:visited {
-}
 
-.card:link {
-}
+.card:visited {}
 
-.card:hover {
-  transform: scale(1.05);
-}
+.card:link {}
+
+
 
 .profile-image {
   /*This is the image inserted using Java*/
@@ -166,7 +177,8 @@ nav h3 {
 }
 
 .card_links:link {
-  text-decoration: none; /* remove the line under the link*/
+  text-decoration: none;
+  /* remove the line under the link*/
   font-weight: 800;
 }
 
@@ -187,9 +199,11 @@ nav h3 {
   0% {
     color: #422724;
   }
+
   40% {
     color: #a00c0c;
   }
+
   100% {
     color: #422724;
   }
@@ -202,10 +216,12 @@ nav h3 {
 /*  ----------------------------------------------------------------------------------------------------  ;*/
 
 #trees {
-  z-index: -1;
+
+  z-index: -3;
   position: fixed;
   bottom: 44px;
   right: 0;
+
 }
 
 footer {
@@ -218,7 +234,8 @@ footer {
 }
 
 footer ul {
-  list-style-type: none; /*remove the bulit*/
+  list-style-type: none;
+  /*remove the bulit*/
   padding: 10px 0;
   margin: 0px 60px 0px 60px;
   display: flex;
@@ -264,6 +281,7 @@ footer ul img {
 .pushright {
   margin-right: auto;
 }
+
 .pushleft {
   margin-left: auto;
 }
@@ -276,7 +294,7 @@ footer ul img {
 .wrapper {
   width: 60%;
   margin: 5em auto 4em auto;
-  padding: 100px 0;
+  /* padding: 100px 0; */
   display: flex;
 }
 
@@ -284,6 +302,7 @@ footer ul img {
   flex-basis: 67%;
   margin-right: 5%;
 }
+
 .aright {
   flex-basis: 23%;
 }
@@ -291,7 +310,8 @@ footer ul img {
 /*  --- map gallery ---*/
 
 .gallery-img {
-  display: none; /*  first of all dont display ---*/
+  display: none;
+  /*  first of all dont display ---*/
   width: 100%;
   border: 0;
 }
@@ -301,7 +321,7 @@ footer ul img {
 }
 
 iframe {
-  height: 500px;
+  height: 394px;
 }
 
 .image-gallery-btn {
@@ -309,7 +329,8 @@ iframe {
 }
 
 .prev {
-  margin-right: 22px; /*  space between buttons---*/
+  margin-right: 22px;
+  /*  space between buttons---*/
 }
 
 /*  ----------------------------------------------------------------------------------------------------  ;*/
@@ -319,16 +340,16 @@ iframe {
 /*  ----------------------------------------------------------------------------------------------------  ;*/
 
 .oneline {
-  width: 28%; /*קובע את רוחב הטופס*/
-  margin: 5em auto 4em auto;
+  width: 28%;
+  /*קובע את רוחב הטופס*/
+  margin: 5em auto 1em auto;
 }
 
 .oneline form {
-  margin: -3em 0 0 0;
+  margin: -4em 0 0 0;
 }
 
-#identify {
-}
+#identify {}
 
 #identify,
 input,
@@ -363,6 +384,7 @@ label {
   margin-bottom: 0.1rem;
   margin-top: 0.8rem;
 }
+
 select {
   color: rgb(156, 156, 156);
   color: #422724;
